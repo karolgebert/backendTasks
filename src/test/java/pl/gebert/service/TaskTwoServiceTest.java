@@ -1,6 +1,7 @@
 package pl.gebert.service;
 
 import org.junit.jupiter.api.Test;
+import pl.gebert.model.Pair;
 
 import java.util.Arrays;
 import java.util.List;
@@ -15,7 +16,7 @@ class TaskTwoServiceTest {
 
     @Test
     void getPairs() {
-        List<TaskTwoService.Pair> pairs = taskTwoService.getPairs(Arrays.stream(input).boxed());
+        List<Pair> pairs = taskTwoService.getPairs(Arrays.stream(input).boxed());
 
         assertEquals(0, pairs.get(0).left());
         assertEquals(13, pairs.get(0).right());

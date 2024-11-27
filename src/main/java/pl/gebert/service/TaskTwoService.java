@@ -1,6 +1,7 @@
 package pl.gebert.service;
 
 import org.springframework.stereotype.Service;
+import pl.gebert.model.Pair;
 
 import java.util.*;
 import java.util.stream.Stream;
@@ -22,10 +23,7 @@ public class TaskTwoService {
                     }
                 });
 
-        pairs.sort(Comparator.comparingInt(a -> a.left));
+        pairs.sort(Comparator.comparingInt(Pair::left));
         return pairs;
-    }
-
-    public record Pair(Integer left, Integer right) {
     }
 }
