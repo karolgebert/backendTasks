@@ -31,6 +31,11 @@ public class PrinterService {
         print("Wrong input. Please provide proper input.");
     }
 
+    public void askUserForInput(int taskNumber, String details) {
+        print("Please provide proper input for task: " + taskNumber);
+        print(details);
+    }
+
     public void printTaskOneResult(Supplier<Stream<Integer>> streamSupplier) {
         print(taskOneService.getInOrder(streamSupplier.get()));
         print("count: " + taskOneService.getCount(streamSupplier.get()));
