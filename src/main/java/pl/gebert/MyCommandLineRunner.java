@@ -7,9 +7,6 @@ import pl.gebert.model.Pair;
 import pl.gebert.service.PrinterService;
 
 import java.util.*;
-import java.util.function.Consumer;
-import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
 
 @Component
 public class MyCommandLineRunner implements CommandLineRunner {
