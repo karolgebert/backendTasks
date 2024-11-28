@@ -18,12 +18,10 @@ public class TaskThreeService {
                 continue;
             }
 
-            if (hasConnection(previous, currentPair)) {
-                previous = currentPair;
-            } else {
+            if (!hasConnection(previous, currentPair)) {
                 counter++;
-                previous = null;
             }
+            previous = currentPair;
         }
 
         return counter;

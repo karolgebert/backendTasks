@@ -52,4 +52,14 @@ class TaskThreeServiceTest {
 
         assertEquals(6, count);
     }
+
+    @Test
+    @DisplayName("Count separated graphs for few single pair graphs when first pair is not connected to anyone")
+    void countSeparatedGraphsFewSinglePairNotConnectedFirst() {
+        List<Pair> pairs = Lists.list(new Pair(1,2), new Pair(3, 4), new Pair(4, 2));
+
+        int count = taskThreeService.countSeparatedGraphs(pairs);
+
+        assertEquals(2, count);
+    }
 }
